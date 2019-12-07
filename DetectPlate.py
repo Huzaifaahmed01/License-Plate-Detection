@@ -8,9 +8,8 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import imutils
 
-# filename = "car2.jpeg"
-# car_image = imread(filename, as_gray=True)
-def detection(car_image):
+def detection(filename):
+    car_image = imread(filename, as_gray=True)
     gray_car_image = car_image * 255
     threshold_value = threshold_otsu(gray_car_image)
     binary_car_image = gray_car_image > threshold_value

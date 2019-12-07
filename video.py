@@ -1,5 +1,4 @@
-
-filename = './video12.mp4'
+filename = './video.mp4'
 
 import cv2
 import imutils
@@ -22,8 +21,7 @@ cv2.destroyAllWindows()
 plate_detect = False
 i = 1
 while not plate_detect and i < count:
-    car_image = imread("./output/frame%d.jpg"%(count-i), as_gray=True)
-    plate_detect=detection(car_image)
+    plate_detect=detection("./output/frame%d.jpg"%(count-i))
     i += 1
 
 if plate_detect == False:
